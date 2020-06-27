@@ -7,7 +7,27 @@
 > I am storing event listeners in an array at the moment of creation.
 > When I want to remove them, I am using that array to address them.
 
-### 
+
+## Here is my modules and their public properties:
+
+#### NewBoard
+- board
+
+#### GameBoard
+- getBoard
+- move
+- getTurn
+- resetBoard
+
+#### GamePlay
+- moveAndCheck
+
+#### BoardListener
+- changeSquare
+
+#### PlayOnPage
+- `returns nothing`
+
 
 ![screenshot](./images/ttt.png)
 
