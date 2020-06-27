@@ -1,10 +1,6 @@
+/* eslint-disable no-unused-vars */
 const NewBoard = (function NewBoard() {
   const board = ['', '', '', '', '', '', '', '', ''];
-  // const board = [...Array(9).keys()]
-  /* const board = [0, 1, 0,
-                 1, 0, 1,
-                 1, '', 1]; */
-  /* const board = [0, 1, 0, 1, 0, 1, 0, '', '']; */
   return { board };
 }());
 
@@ -43,7 +39,7 @@ const GameBoard = (function Board() {
     return false;
   };
 
-  const getTurn = function() {
+  const getTurn = function getTurn() {
     return turn;
   };
 
@@ -64,7 +60,7 @@ const GameBoard = (function Board() {
   };
 }());
 
-const GamePlay = (function GameFlow() {
+const GamePlay = (function GamePlay() {
   const winningPositions = function winningPositions() {
     const board = GameBoard.getBoard();
     return [
@@ -77,7 +73,7 @@ const GamePlay = (function GameFlow() {
       [...board.slice(0, 1), ...board.slice(4, 5), ...board.slice(8, 9)],
       [...board.slice(2, 3), ...board.slice(4, 5), ...board.slice(6, 7)],
     ];
-  }
+  };
 
   const whosTurn = function whosTurn() {
     return GameBoard.getTurn() % 2;
@@ -99,7 +95,7 @@ const GamePlay = (function GameFlow() {
     });
     return winnerAndPosition;
   };
-  
+
   const checkWin = function checkWin() {
     const winner = winningPositionsCheck();
     if (winner !== undefined) {
@@ -133,9 +129,6 @@ const GamePlay = (function GameFlow() {
   return { moveAndCheck };
 }());
 
-// console.log(GamePlay.moveAndCheck(7));
-// console.log(GameBoard.getBoard());
-
 const playerFactory = (name) => {
   let winCount = 0;
 
@@ -149,16 +142,6 @@ const playerFactory = (name) => {
 
   return { name, increaseWinCount, getWinCount };
 };
-
-/* const kubi = playerFactory('Kubilay');
-kubi.increaseWinCount();
-
-const jam = playerFactory('Jamilia');
-jam.increaseWinCount();
-jam.increaseWinCount();
-
-console.log(jam.getWinCount());
-console.log(kubi.getWinCount()); */
 
 const motivationalMessages = (function motivationalMessages() {
   const messages = [
@@ -180,7 +163,7 @@ const motivationalMessages = (function motivationalMessages() {
     'Noooooo...',
   ];
 
-  const randomNumber = function() {
+  const randomNumber = function randomNumber() {
     return Math.floor(Math.random() * messages.length);
   };
 

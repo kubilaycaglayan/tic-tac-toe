@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/background.jpg");
+  background-image: url("../images/background.jpg");
   background-size: cover;
   height: 100vh;
   background-position-y: 60%;
@@ -25,4 +25,3 @@ body .result {
   display: none;
   min-width: 310px;
 }
-/*# sourceMappingURL=style.css.map */

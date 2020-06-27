@@ -1,3 +1,6 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const BoardListener = (function BoardListener() {
   const circleShape = '<i class="far fa-circle text-warning"></i>';
   const xShape = '<i class="fas fa-times text-primary"></i>';
@@ -14,15 +17,14 @@ const BoardListener = (function BoardListener() {
 }());
 
 
-
 const PlayOnPage = (function PlayOnPage() {
-  let turn = 0;
-  let listeners = [];
+  const turn = 0;
+  const listeners = [];
   let player1;
   let player2;
 
   const hideElement = function hideElement(element) {
-    return element.style.display = 'none';
+    element.style.display = 'none';
   };
 
   const showElement = function showElement(element) {
@@ -156,13 +158,13 @@ const PlayOnPage = (function PlayOnPage() {
       square.removeEventListener('click', listener, false);
     });
   };
-  
+
   const setTurnBox = function setTurnBox() {
     if (GameBoard.getTurn() % 2 === 0) {
-      turnBox.innerHTML = player1.name + '! It is your turn...';
+      turnBox.innerHTML = `${player1.name}! It is your turn...`;
     } else {
-      turnBox.innerHTML = player2.name + '! It is your turn...';
-    };
+      turnBox.innerHTML = `${player2.name}! It is your turn...`;
+    }
   };
 
   const start = function start() {
@@ -178,13 +180,10 @@ const PlayOnPage = (function PlayOnPage() {
   };
 
   const restart = function restart() {
+    // eslint-disable-next-line no-restricted-globals
     location.reload();
   };
 
   startButton.addEventListener('click', start);
   restartButton.addEventListener('click', restart);
-
-  return {
-    createPlayers,
-  };
 }());
