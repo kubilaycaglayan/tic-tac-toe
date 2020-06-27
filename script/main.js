@@ -1,10 +1,5 @@
 const NewBoard = (function NewBoard() {
   const board = ['', '', '', '', '', '', '', '', ''];
-  // const board = [...Array(9).keys()]
-  /* const board = [0, 1, 0,
-                 1, 0, 1,
-                 1, '', 1]; */
-  /* const board = [0, 1, 0, 1, 0, 1, 0, '', '']; */
   return { board };
 }());
 
@@ -133,9 +128,6 @@ const GamePlay = (function GameFlow() {
   return { moveAndCheck };
 }());
 
-// console.log(GamePlay.moveAndCheck(7));
-// console.log(GameBoard.getBoard());
-
 const playerFactory = (name) => {
   let winCount = 0;
 
@@ -149,16 +141,6 @@ const playerFactory = (name) => {
 
   return { name, increaseWinCount, getWinCount };
 };
-
-/* const kubi = playerFactory('Kubilay');
-kubi.increaseWinCount();
-
-const jam = playerFactory('Jamilia');
-jam.increaseWinCount();
-jam.increaseWinCount();
-
-console.log(jam.getWinCount());
-console.log(kubi.getWinCount()); */
 
 const motivationalMessages = (function motivationalMessages() {
   const messages = [

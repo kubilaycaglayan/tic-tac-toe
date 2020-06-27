@@ -1,6 +1,13 @@
 # Tic Tac Tow
 
-> You can play Tic-Tac-Toe with this application. My purpose was to build it with only Javascript. There is not global variables. Almost every method is single responsible.
+> You can play Tic-Tac-Toe with this application. My purpose was to only build it with Javascript. There are no global variables. Almost every method is single responsible. 
+
+### How To Remove Event Listeners?
+
+> I am storing event listeners in an array at the moment of creation.
+> When I want to remove them, I am using that array to address them.
+
+### 
 
 ![screenshot](./images/ttt.png)
 
@@ -14,7 +21,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://rawcdn.githack.com/kubilaycaglayan/tic-tac-toe-js/fcac74cfe0a3afc07899fbc84834747b63b76b7b/tictactoe.html)
 
 ## Getting Started
 

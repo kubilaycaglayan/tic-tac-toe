@@ -184,7 +184,4 @@ const PlayOnPage = (function PlayOnPage() {
   startButton.addEventListener('click', start);
   restartButton.addEventListener('click', restart);
 
-  return {
-    createPlayers,
-  };
 }());
