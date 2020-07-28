@@ -61,6 +61,10 @@
 
 - There is no automated tests for this project.
 
+### Future Features
+
+- Ability to play across the internet with your friends.
+
 ## Author
 
 👤 **Kubilay Caglayan**
